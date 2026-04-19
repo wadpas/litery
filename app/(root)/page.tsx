@@ -7,7 +7,6 @@ const HomePage = () => {
     <div>
       <h1>Home Page</h1>
       <div>About page</div>
-
       <Button>Button</Button>
     </div>
   )
