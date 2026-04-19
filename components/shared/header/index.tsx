@@ -1,8 +1,7 @@
-import { ShoppingCart, UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { APP_NAME } from "@/lib/constants";
+import Menu from "./menu";
 
 const Header = () => (
   <header className="sticky top-0 z-50 w-full shadow-xs backdrop-blur-xs">
@@ -20,20 +19,7 @@ const Header = () => (
           </span>
         </Link>
       </div>
-      <div className="space-x-2">
-        <Button asChild variant="ghost">
-          <Link href="/cart">
-            <ShoppingCart />
-            Кошик
-          </Link>
-        </Button>
-        <Button asChild variant="ghost">
-          <Link href="/account">
-            <UserIcon />
-            Вхід
-          </Link>
-        </Button>
-      </div>
+      <Menu />
     </div>
   </header>
 );
