@@ -1,15 +1,14 @@
 import Image from 'next/image'
-import logo from '../public/logo.svg'
+import logo from '@/public/logo.svg'
+import { Button } from '@/components/ui/button'
 
 const HomePage = () => {
   return (
     <div>
       <h1>Home Page</h1>
-      <Image
-        src={logo}
-        alt='logo'
-        width={100}
-        height={100}></Image>
+      <div>About page</div>
+
+      <Button>Button</Button>
     </div>
   )
 }
