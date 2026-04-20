@@ -18,7 +18,7 @@ const sampleData = {
       banner: "banner-1.jpg",
     },
     {
-      name: "Brooks Brothers Long Sleeved Shirt",
+      name: "Історія бренду Nokia - які помилки Nokia потопили компанію?",
       slug: "brooks-brothers-long-sleeved-shirt",
       category: "Men's Dress Shirts",
       description: "Timeless style and premium comfort",

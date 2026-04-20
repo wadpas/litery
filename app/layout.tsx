@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Maitree, Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/assets/styles/globals.css";
-import { cn } from "@/lib/utils";
 import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 import Header from "@/components/shared/header";
 import Footer from "@/components/footer";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
-
-const lato = Maitree({
+const font = Inter({
   weight: ["400"],
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${lato.className} antialiased`}>
+    <html lang="en">
+      <body className={`${font.className} antialiased`}>
         <Header />
         {children}
         <Footer />
