@@ -13,3 +13,13 @@ export async function getLatestProducts() {
 
   return data;
 }
+
+export async function getProductBySlug(slug: string) {
+  const data = await prisma.product.findUnique({
+    where: {
+      slug,
+    },
+  });
+
+  return data;
+}
