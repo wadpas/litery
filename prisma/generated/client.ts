@@ -46,3 +46,8 @@ export { Prisma }
  * 
  */
 export type Product = Prisma.ProductModel
+/**
+ * Model Book
+ * 
+ */
+export type Book = Prisma.BookModel

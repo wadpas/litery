@@ -7,7 +7,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="items-center p-0">
-        <Link href={`/product/${product.slug}`}>
+        <Link href={`/books/${product.slug}`}>
           <Image
             src={product.images[0]}
             alt={product.name}
@@ -19,7 +19,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </CardHeader>
       <CardContent className="grid gap-4 p-4">
         <div className="text-sm">{product.brand}</div>
-        <Link href={`/product/${product.slug}`}>
+        <Link href={`/books/${product.slug}`}>
           <h2 className="text-base font-bold"> {product.name}</h2>
         </Link>
         <div className="flex-between gap-4">
