@@ -26,6 +26,7 @@ model Product {
 
 model Book {
   id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug        String   @default("litery-book")
   title       String
   author      String
   description String

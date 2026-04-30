@@ -1,11 +1,11 @@
-import ProductList from "@/components/product/product-list";
-import { getLatestProducts } from "@/lib/actions/product.actions";
+import BookList from "@/components/book/book-list";
+import { getBooks } from "@/lib/actions/book.actions";
 
 const HomePage = async () => {
-  const latestProducts = await getLatestProducts();
+  const books = await getBooks();
   return (
     <div>
-      <ProductList data={latestProducts} title="Книги" limit={3} />
+      <BookList data={books} title="Книги" limit={3} />
     </div>
   );
 };

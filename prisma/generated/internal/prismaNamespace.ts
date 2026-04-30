@@ -614,6 +614,7 @@ export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeo
 
 export const BookScalarFieldEnum = {
   id: 'id',
+  slug: 'slug',
   title: 'title',
   author: 'author',
   description: 'description',

@@ -22,6 +22,7 @@ export const insertProductSchema = z.object({
 
 export const insertBookSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters long"),
+  slug: z.string().min(3, "Slug must be at least 3 characters long"),
   author: z.string().min(3, "Author must be at least 3 characters long"),
   description: z
     .string()

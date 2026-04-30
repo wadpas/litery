@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { insertBookSchema, insertProductSchema } from "@/lib/validators";
+import { Prisma } from "@/prisma/generated/client";
 
 export type Product = z.infer<typeof insertProductSchema> & {
   id: string;

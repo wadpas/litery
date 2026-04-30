@@ -42,6 +42,7 @@ export type BookSumAggregateOutputType = {
 
 export type BookMinAggregateOutputType = {
   id: string | null
+  slug: string | null
   title: string | null
   author: string | null
   description: string | null
@@ -55,6 +56,7 @@ export type BookMinAggregateOutputType = {
 
 export type BookMaxAggregateOutputType = {
   id: string | null
+  slug: string | null
   title: string | null
   author: string | null
   description: string | null
@@ -68,6 +70,7 @@ export type BookMaxAggregateOutputType = {
 
 export type BookCountAggregateOutputType = {
   id: number
+  slug: number
   title: number
   author: number
   description: number
@@ -99,6 +102,7 @@ export type BookSumAggregateInputType = {
 
 export type BookMinAggregateInputType = {
   id?: true
+  slug?: true
   title?: true
   author?: true
   description?: true
@@ -112,6 +116,7 @@ export type BookMinAggregateInputType = {
 
 export type BookMaxAggregateInputType = {
   id?: true
+  slug?: true
   title?: true
   author?: true
   description?: true
@@ -125,6 +130,7 @@ export type BookMaxAggregateInputType = {
 
 export type BookCountAggregateInputType = {
   id?: true
+  slug?: true
   title?: true
   author?: true
   description?: true
@@ -227,6 +233,7 @@ export type BookGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArg
 
 export type BookGroupByOutputType = {
   id: string
+  slug: string
   title: string
   author: string
   description: string
@@ -265,6 +272,7 @@ export type BookWhereInput = {
   OR?: Prisma.BookWhereInput[]
   NOT?: Prisma.BookWhereInput | Prisma.BookWhereInput[]
   id?: Prisma.UuidFilter<"Book"> | string
+  slug?: Prisma.StringFilter<"Book"> | string
   title?: Prisma.StringFilter<"Book"> | string
   author?: Prisma.StringFilter<"Book"> | string
   description?: Prisma.StringFilter<"Book"> | string
@@ -280,6 +288,7 @@ export type BookWhereInput = {
 
 export type BookOrderByWithRelationInput = {
   id?: Prisma.SortOrder
+  slug?: Prisma.SortOrder
   title?: Prisma.SortOrder
   author?: Prisma.SortOrder
   description?: Prisma.SortOrder
@@ -298,6 +307,7 @@ export type BookWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.BookWhereInput | Prisma.BookWhereInput[]
   OR?: Prisma.BookWhereInput[]
   NOT?: Prisma.BookWhereInput | Prisma.BookWhereInput[]
+  slug?: Prisma.StringFilter<"Book"> | string
   title?: Prisma.StringFilter<"Book"> | string
   author?: Prisma.StringFilter<"Book"> | string
   description?: Prisma.StringFilter<"Book"> | string
@@ -313,6 +323,7 @@ export type BookWhereUniqueInput = Prisma.AtLeast<{
 
 export type BookOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
+  slug?: Prisma.SortOrder
   title?: Prisma.SortOrder
   author?: Prisma.SortOrder
   description?: Prisma.SortOrder
@@ -336,6 +347,7 @@ export type BookScalarWhereWithAggregatesInput = {
   OR?: Prisma.BookScalarWhereWithAggregatesInput[]
   NOT?: Prisma.BookScalarWhereWithAggregatesInput | Prisma.BookScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Book"> | string
+  slug?: Prisma.StringWithAggregatesFilter<"Book"> | string
   title?: Prisma.StringWithAggregatesFilter<"Book"> | string
   author?: Prisma.StringWithAggregatesFilter<"Book"> | string
   description?: Prisma.StringWithAggregatesFilter<"Book"> | string
@@ -351,6 +363,7 @@ export type BookScalarWhereWithAggregatesInput = {
 
 export type BookCreateInput = {
   id?: string
+  slug?: string
   title: string
   author: string
   description: string
@@ -366,6 +379,7 @@ export type BookCreateInput = {
 
 export type BookUncheckedCreateInput = {
   id?: string
+  slug?: string
   title: string
   author: string
   description: string
@@ -381,6 +395,7 @@ export type BookUncheckedCreateInput = {
 
 export type BookUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   author?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
@@ -396,6 +411,7 @@ export type BookUpdateInput = {
 
 export type BookUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   author?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
@@ -411,6 +427,7 @@ export type BookUncheckedUpdateInput = {
 
 export type BookCreateManyInput = {
   id?: string
+  slug?: string
   title: string
   author: string
   description: string
@@ -426,6 +443,7 @@ export type BookCreateManyInput = {
 
 export type BookUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   author?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
@@ -441,6 +459,7 @@ export type BookUpdateManyMutationInput = {
 
 export type BookUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   author?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
@@ -456,6 +475,7 @@ export type BookUncheckedUpdateManyInput = {
 
 export type BookCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  slug?: Prisma.SortOrder
   title?: Prisma.SortOrder
   author?: Prisma.SortOrder
   description?: Prisma.SortOrder
@@ -478,6 +498,7 @@ export type BookAvgOrderByAggregateInput = {
 
 export type BookMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  slug?: Prisma.SortOrder
   title?: Prisma.SortOrder
   author?: Prisma.SortOrder
   description?: Prisma.SortOrder
@@ -491,6 +512,7 @@ export type BookMaxOrderByAggregateInput = {
 
 export type BookMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  slug?: Prisma.SortOrder
   title?: Prisma.SortOrder
   author?: Prisma.SortOrder
   description?: Prisma.SortOrder
@@ -531,6 +553,7 @@ export type BookUpdateimagesInput = {
 
 export type BookSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  slug?: boolean
   title?: boolean
   author?: boolean
   description?: boolean
@@ -546,6 +569,7 @@ export type BookSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
 
 export type BookSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  slug?: boolean
   title?: boolean
   author?: boolean
   description?: boolean
@@ -561,6 +585,7 @@ export type BookSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
 
 export type BookSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
+  slug?: boolean
   title?: boolean
   author?: boolean
   description?: boolean
@@ -576,6 +601,7 @@ export type BookSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
 
 export type BookSelectScalar = {
   id?: boolean
+  slug?: boolean
   title?: boolean
   author?: boolean
   description?: boolean
@@ -589,13 +615,14 @@ export type BookSelectScalar = {
   createdAt?: boolean
 }
 
-export type BookOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "author" | "description" | "year" | "genre" | "images" | "price" | "rating" | "numReviews" | "isFeatured" | "createdAt", ExtArgs["result"]["book"]>
+export type BookOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "slug" | "title" | "author" | "description" | "year" | "genre" | "images" | "price" | "rating" | "numReviews" | "isFeatured" | "createdAt", ExtArgs["result"]["book"]>
 
 export type $BookPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Book"
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
+    slug: string
     title: string
     author: string
     description: string
@@ -1031,6 +1058,7 @@ export interface Prisma__BookClient<T, Null = never, ExtArgs extends runtime.Typ
  */
 export interface BookFieldRefs {
   readonly id: Prisma.FieldRef<"Book", 'String'>
+  readonly slug: Prisma.FieldRef<"Book", 'String'>
   readonly title: Prisma.FieldRef<"Book", 'String'>
   readonly author: Prisma.FieldRef<"Book", 'String'>
   readonly description: Prisma.FieldRef<"Book", 'String'>

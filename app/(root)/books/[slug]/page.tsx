@@ -1,8 +1,8 @@
-import ProductImages from "@/components/product/product-images";
+import BookImages from "@/components/book/book-images";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getProductBySlug } from "@/lib/actions/product.actions";
+import { getProductBySlug } from "@/lib/actions/book.actions";
 import { notFound } from "next/navigation";
 
 const ProductPage = async (props: { params: Promise<{ slug: string }> }) => {
@@ -16,7 +16,7 @@ const ProductPage = async (props: { params: Promise<{ slug: string }> }) => {
       <section>
         <div className="grid grid-cols-1 md:grid-cols-5">
           <div className="col-span-2">
-            <ProductImages images={product.images} />
+            <BookImages images={product.images} />
           </div>
           <div className="col-span-2 p-5">
             <div className="flex flex-col gap-6">
@@ -38,6 +38,7 @@ const ProductPage = async (props: { params: Promise<{ slug: string }> }) => {
               <p>{product.description}</p>
             </div>
           </div>
+
           <div className="mt-4">
             <Card>
               <CardContent className="p-4">

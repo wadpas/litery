@@ -28,5 +28,12 @@ export const prisma = new PrismaClient({ adapter }).$extends({
         },
       },
     },
+    book: {
+      rating: {
+        compute(book) {
+          return book.rating.toString();
+        },
+      },
+    },
   },
 });

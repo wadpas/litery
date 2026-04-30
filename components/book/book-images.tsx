@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const ProductImages = ({ images }: { images: string[] }) => {
+const BookImages = ({ images }: { images: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   return (
@@ -41,4 +41,4 @@ const ProductImages = ({ images }: { images: string[] }) => {
   );
 };
 
-export default ProductImages;
+export default BookImages;
